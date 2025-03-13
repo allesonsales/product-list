@@ -16,8 +16,6 @@ function App() {
     <>
       <Provider>
         <Home />
-        <Item />
-        <Cart />
         <ModalBuy />
       </Provider>
     </>
