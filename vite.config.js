@@ -5,6 +5,7 @@
   export default defineConfig({
     base: '/product-list/',
     plugins: [
+      react(),
       viteStaticCopy({
         targets: [
           {
