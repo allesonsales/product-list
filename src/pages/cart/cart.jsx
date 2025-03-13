@@ -2,9 +2,8 @@ import { useState, useContext } from "react";
 import './style.css'
 import { combinedContext } from "../../provider";
 
-/* Levar esse total price para o contexto pois vou usar no modal */
 const Cart = () => {
-    const {cartCount, setCartCount, cartItems, countItem, item, setBuy, totalPrice} = useContext(combinedContext);
+    const {cartCount, setCartCount, cartItems, countItem, item, setBuy, totalPrice, removeX} = useContext(combinedContext);
 
     return (
         <div className="cart">
@@ -21,7 +20,7 @@ const Cart = () => {
                                     <span>{(Number(item.quantity) * Number(item.price.replace(',', '.'))).toFixed(2)}</span>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-circle-xmark"></i>
+                            <i class="fa-solid fa-circle-xmark" onClick={() => {removeX(item.name)}}></i>
                         </div>
                     ))}
                     <div className="total">
