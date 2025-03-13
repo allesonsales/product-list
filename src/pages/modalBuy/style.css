@@ -1,0 +1,146 @@
+.modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.299);
+    text-align: left;
+
+    .modalContent {
+        background-color: white;
+        height: 90vh;
+        width: 100vw;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        border-radius: 1rem 1rem 0 0;
+
+        .top {
+            width: 100%;
+
+            .fa-circle-check {
+                color: var(--Green);
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            small {
+                margin-bottom: 1rem;
+                color: var(--Rose-300);
+            }
+        }
+
+        .cartContent {
+            background-color: var(--Rose-50);
+            width: 100%;
+            margin-top: 1rem;
+            border-radius: 1rem;
+
+            .cartItem {
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                border-bottom: solid 1px var(--Rose-200);
+
+                .image {
+                    height: 48px;
+                    align-self: flex-start;
+
+                    img {
+                        object-fit: cover;
+                        height: 48px;
+                        border-radius: .5rem;
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 1rem;
+
+                    span {
+                        font-weight: 600;
+                    }
+
+                    .priceItem {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+
+                        span:nth-child(1) {
+                            color: var(--Red);
+                            font-weight: 600;
+                            font-size: .8rem;
+                        }
+
+                        span:nth-child(2) {
+                            color: var(--Rose-300);
+                        }
+                    }
+                }
+
+                .price {
+                    display: flex;
+                    font-weight: 800;
+                    margin-left: auto;
+                }
+            }
+
+            .order {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1.5rem;
+                
+                span:nth-child(2) {
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        button {
+            background-color: var(--Red);
+            color: white;
+            padding: .8rem;
+            border: none;
+            width: 90%;
+            border-radius: 1rem;
+            position: absolute;
+            bottom: 1rem;
+        }
+    }
+}
+
+@media (min-width: 860px) {
+
+    .modalBackground {
+        align-items: center;
+
+        .modalContent {
+            width: 40vw;
+            border-radius: 1rem 1rem;
+
+            button {
+                width: 30%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+}
+

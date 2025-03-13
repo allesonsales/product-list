@@ -1,0 +1,14 @@
+.containerPrincipal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 860px) {
+    
+    .containerPrincipal {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+}

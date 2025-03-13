@@ -1,0 +1,102 @@
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .background {
+            width: 100%;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 1rem;
+        }
+
+        .addCart {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: white;
+            border: solid 1px var(--Rose-300);
+            border-radius: .6rem;
+            width: 40%;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            .fa-cart-plus {
+                color: var(--Red);
+                font-size: .8rem;
+            }
+
+            span {
+                font-size: .5rem;
+                font-weight: 600;
+                margin: .3rem;
+            }
+        }
+
+        .addCart:hover {
+            background-color: var(--Red);
+
+            .fa-cart-plus {
+                color: white;
+            }
+
+            span {
+                color: white;
+            }
+        }
+
+        .onCart {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 40%;
+            background-color: var(--Red);
+            border-radius: .6rem;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: white;
+
+            span {
+                font-size: .8rem;
+                font-weight: 600;
+                margin: .3rem;
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: flex-start;
+
+            small {
+                margin: 0;
+                color: var(--Rose-400);
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+                color: var(--Red);
+                font-weight: 600;
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 860px) {
+    .itemContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
