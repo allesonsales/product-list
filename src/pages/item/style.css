@@ -62,8 +62,12 @@
             cursor: pointer;
             color: white;
 
+            .fa-solid {
+                font-size: .7rem;
+            }
+
             span {
-                font-size: .8rem;
+                font-size: .5rem;
                 font-weight: 600;
                 margin: .3rem;
             }
