@@ -37,7 +37,7 @@ const Cart = () => {
             ) : (
                 <>
                     <div className="imageEmpty">
-                        <img src="product-list/src/assets/images/illustration-empty-cart.svg" alt="" />
+                        <img src="../src/assets/images/illustration-empty-cart.svg" alt="" />
                     </div>
                     <small>Your added items will appear here</small>
                 </>
