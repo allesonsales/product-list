@@ -48,7 +48,16 @@ const Provider = ({children}) => {
         setCartCount(cartCount + 1);
     }
     
-
+    const removeItem = (name) => {
+        const itemToRemove = cartItems.find(item => item.name === name);
+        if(itemToRemove.quantity === 1) {
+            setCartItems(prevCartItems => prevCartItems.filter(item =>item.name !== name))
+        } else {
+            setCartItems(prevCartItems => prevCartItems.map(item => item.name === name ? {...item, quantity: item.quantity -1} : item   
+            ))
+        }
+        setCartCount(cartCount - 1)
+    }
 
     const totalPrice = cartItems.reduce((total, item) => {
         const price = Number(item.price.replace(',', '.'));
@@ -63,7 +72,7 @@ const Provider = ({children}) => {
 
     return (
         <combinedContext.Provider value = {{
-            item, setItem, cartCount, setCartCount, addCart, cartItems, buy, setBuy, countItem, totalPrice, getQuantity
+            item, setItem, cartCount, setCartCount, addCart, cartItems, buy, setBuy, countItem, totalPrice, getQuantity, removeItem
         }}>
             {children}
         </combinedContext.Provider>

@@ -3,7 +3,7 @@ import { combinedContext } from "../../provider";
 import './style.css';
 
 const Item = () => {
-    const { item, addCart, countItem, cartItems, getQuantity } = useContext(combinedContext);
+    const { item, addCart, countItem, cartItems, getQuantity, removeItem } = useContext(combinedContext);
 
     const onCart = (name) => cartItems.some(cartItem => cartItem.name === name);
 
@@ -22,7 +22,7 @@ const Item = () => {
                             {onCart(name) ? (
                                 <>
                                 <div className="onCart">
-                                    <i className="fa-solid fa-circle-minus"></i>
+                                    <i className="fa-solid fa-circle-minus" onClick={() => {removeItem(name)}}></i>
                                     <span>{getQuantity(name)}</span>
                                     <i className="fa-solid fa-circle-plus" onClick={() => { addCart({ name, price, thumbnail }) }}></i>
                                 </div>
